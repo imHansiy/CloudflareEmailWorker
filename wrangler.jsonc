@@ -1,0 +1,35 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "email-worker",
+  "compatibility_date": "2025-08-03",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "main": "./src/worker.ts",
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "single-page-application"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "CONFIG_KV",
+      "id": "YOUR_KV_NAMESPACE_ID"
+    }
+  ],
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true
+    }
+  },
+  "ai": {
+    "binding": "AI"
+  },
+  "send_email": [
+    {
+      "name": "SEND_EMAIL"
+    }
+  ]
+}

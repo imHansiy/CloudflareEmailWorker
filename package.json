@@ -1,0 +1,27 @@
+{
+  "name": "email-intelligence-worker",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "vite build && wrangler deploy"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.3.7",
+    "@mozilla/readability": "^0.6.0",
+    "antd": "^5.18.0",
+    "hono": "^4.11.9",
+    "linkedom": "^0.18.12",
+    "mimetext": "^3.0.28",
+    "postal-mime": "^2.7.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^6.3.5",
+    "wrangler": "^4.17.0"
+  }
+}
